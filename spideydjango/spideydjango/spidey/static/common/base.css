@@ -1,0 +1,194 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0px;
+	padding:0px;
+  font-family: "Arial";
+}
+
+/* Set Background Picture Full Screen*/
+body{
+  width:100%;
+  height:100%;
+  background: -webkit-linear-gradient(90deg, #136a8a 10%, #267871 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #136a8a 10%, #267871 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #136a8a 10%, #267871 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #136a8a 10%, #267871 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #136a8a 10%, #267871 90%); /* W3C */
+  background-image: url(../images/backgroundpic.jpg);
+  display: inline-block;
+  background-position: relative;
+  background-attachment:fixed;
+  background-size:cover;
+}
+
+/* CSS of Header*/
+body>header>nav{
+  width: 100%;
+  height: 90px;
+  background-color: rgba(255,255,255,0.05);
+}
+
+body>header>nav>ul{
+  width: 960px;
+  height: 90px;
+  margin: 0 auto;
+}
+
+body>header>nav>ul li{
+  display: inline;
+}
+body>header>nav>ul>li img{
+  width: 206px;
+  height: 44px;
+  margin-top: 23px;
+}
+
+body>header>nav>ul>li a{
+  float: right;
+  margin-top: 36px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+body>header>nav>ul>li a.hiddena{
+  display: none;
+}
+
+/* CSS of Content*/
+section.content{
+  width: 800px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 8%;
+  padding-top: 24px;
+  background-color: rgba(255,255,255,0.85);
+  -moz-box-shadow:1px 1px 1px #ccc;
+  -webkit-box-shadow:1px 1px 1px #ccc;
+  box-shadow:1px 1px 1px #ccc;
+}
+
+section.content h2{
+  text-align: center;
+  font-size: 36px;
+  font-weight: normal;
+  color: #666;
+}
+
+section.content span{
+  font-weight: bolder;
+}
+
+section.content>article.hiddenart{
+  display: none;
+}
+
+section.content>article.viewinforart{
+  padding-top: 12px;
+  padding-left: 100px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #727272;
+}
+
+section.content>article.viewinforart #infortable{
+  width: 600px;
+  height: 134px;
+}
+
+section.content>article>h4{
+  padding-top: 12px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+  color: #727272;
+}
+
+section.content fieldset{
+  border: none;
+  text-align: center;
+}
+
+section.content input.input{
+  width: 660px;
+  height: 32px;
+  margin-top: 36px;
+  padding-left: 12px;
+  color: #333;
+}
+
+section.content input.hiddeninput{
+  display: none;
+}
+
+section.content input.submit{
+  width: 325px;
+  height: 40px;
+  margin-top: 32px;
+  border: none;
+  cursor: pointer;
+  background-color: #ff766d;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* CSS of DerivedDataSection*/
+section.hiddensec{
+  display: none;
+}
+
+section#DerivedDataSec fieldset{
+  padding-top: 24px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #727272;
+}
+
+section#DerivedDataSec fieldset>select{
+  width: 80px;
+  height: 20px;
+}
+
+section#DerivedDataSec input.input{
+  width: 500px;
+  margin-top: 23px;
+}
+
+section#DerivedDataSec input.submiturl{
+  margin-top:92px;
+}
+
+/* CSS of Content*/
+footer{
+  width: 100%;
+  height: 90px;
+  position: absolute;
+  clear: both;
+  bottom: 0;
+  background-color: #fff;
+}
+
+footer>article>h4{
+  padding-top: 26px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff766d;
+}
+
+footer>article>p{
+  margin-top: 6px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: #727272;
+}
+
+footer>article a{
+  font-weight: bold;
+  text-decoration: none;
+  color: #727272;
+}

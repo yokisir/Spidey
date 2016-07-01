@@ -1,0 +1,87 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+	<!--Head Statement-->
+	<head>
+	<meta name="keywords" content="Spidey1.0">
+	<meta name="/x.copyright" content="Writer:UESTC All CopyRights Reserved.">
+	<meta name="description" content="System of auto-detect and collect Malicious URLs">
+	<meta charset="utf-8">
+	<title>Spidey</title>
+	<link rel="shortcut icon" href="{% static 'images/ico.ico' %}"/>
+	<link rel="stylesheet" href="{% static 'common/base.css' %}">
+
+	<script type="text/javascript" src="{% static 'common/main.js' %}"></script>
+	<script type="text/javascript" src="{% static 'common/ajax.js' %}"></script>
+
+	</head>
+
+	<body onload=document.urlscanform.inputurl.focus()>
+		<!--PageHeading Start-->
+		<header>
+			<nav>
+				<ul>
+					<li><img class="logo" src="{% static 'images/logo.png' %}" alt="SPIDEY"/></li>
+					<li><a id="DerivedDataa" onclick="DerivedData()">Derived data</a></li>
+					<li><a id="Backa" class="hiddena" onclick="DerivedData_back()">Back</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--PageHeading End-->
+
+		<!--PageContent Start-->
+		<section class="content" id="PageContentSec">
+			<article class="viewmainart" id="mainart">
+				<h2>We Have Already Scan <span>{{sumnum}}</span> Websites</h2>
+				<h4>There is about <span>{{last24num}}</span> website have been scaned during last 24 hours</h4>
+			</article>
+			<article class="hiddenart" id="inforart">
+			</article>
+			<form method="post" name="urlscanform" enctype="multipart/form-data" action="/scanurl/">
+				<fieldset>
+					<input class="input" id="inputurl" name="inputurl" type="text" required onkeypress="if(event.keyCode==13)loadXMLDoc()" placeholder='input the url like "www.google.com"'/>
+					<input class="hiddeninput" name="useforbannerEntersubmit"/>
+					<input class="submit" id="submiturl" name="submiturl" type="button" onclick="loadXMLDoc()" value="Scan This URL"/>
+				</fieldset>
+			</form>
+		</section>
+		<!--PageContent End-->
+		<!--DerivedData Start-->
+		<section class="content hiddensec" id="DerivedDataSec">
+			<h2>DerivedData</h2>
+			<form method="post" enctype="multipart/form-data" action="/deriveddata">
+				<fieldset>
+					<label for="level1">Choose the level between </label>
+					<select name="level1" id="level1">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3" selected="selected">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+					<label for="level2"> and </label>
+					<select name="level2" id="level2">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5" selected="selected">5</option>
+					</select>
+					<br/>
+					<label for="keywordofurls">Keywords of urls:</label>
+					<input class="input" name="keywordofurls" id="keywordofurls" type="text" placeholder='input the keyword like "google"'/>
+					<input class="submit" id="import" name="import" type="submit" value="Import"/>
+				</fieldset>
+			</form>
+		</section>
+		<!--DerivedData End-->
+
+		<!--PageFooter Start-->
+		<footer>
+			<article>
+				<h4>Spidey 1.0</h4>
+				<p>© 2016 UESTC All Rights Reserved. \ <b><a href="mailto:'zeroness@foxmail.com'"><abbr title="Send us email">Contact us</abbr></a></b></p>
+			</article>
+		</footer>
+		<!--Pagefooter End-->
+</html>
