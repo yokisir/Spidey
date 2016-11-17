@@ -135,6 +135,28 @@ section.content input.submit{
   color: #fff;
 }
 
+section.content article.realtimeart{
+  padding-top: 12px;
+  margin: 0 auto;
+  color: #ccc;
+  text-align: center;
+}
+
+section.content article.realtimeart span{
+  cursor: pointer;
+  font-weight: normal;
+  -webkit-transition-property:background-color,color;
+  -webkit-transition-duration:1s;
+  -webkit-transition-timing-function:ease-out;
+  -moz-transition-property:background-color,color;
+  -moz-transition-duration:1s;
+  -moz-transition-timing-function:ease-out;
+}
+
+section.content article.realtimeart span:hover{
+  color: #fff;
+}
+
 /* CSS of DerivedDataSection*/
 section.hiddensec{
   display: none;
@@ -147,18 +169,19 @@ section#DerivedDataSec fieldset{
   color: #727272;
 }
 
-section#DerivedDataSec fieldset>select{
-  width: 80px;
-  height: 20px;
+section#DerivedDataSec input#keywordofurls{
+  width: 280px;
+  margin-top: 23px;
+  margin-right: 28px;
 }
 
-section#DerivedDataSec input.input{
-  width: 500px;
+section#DerivedDataSec input#scoreofurls{
+  width: 80px;
   margin-top: 23px;
 }
 
-section#DerivedDataSec input.submiturl{
-  margin-top:92px;
+section#DerivedDataSec input#export{
+  margin-top:54px;
 }
 
 /* CSS of Content*/

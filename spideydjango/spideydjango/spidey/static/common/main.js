@@ -22,6 +22,7 @@ function DerivedData(){
 	//view different section in body
 	document.getElementById("DerivedDataSec").style.display="block";
 	document.getElementById("PageContentSec").style.display="none";
+	document.getElementById("keywordofurls").focus();
 
 }
 

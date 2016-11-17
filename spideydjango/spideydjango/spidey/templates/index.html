@@ -39,11 +39,14 @@
 			</article>
 			<form method="post" name="urlscanform" enctype="multipart/form-data" action="/scanurl/">
 				<fieldset>
-					<input class="input" id="inputurl" name="inputurl" type="text" required onkeypress="if(event.keyCode==13)loadXMLDoc()" placeholder='input the url like "www.google.com"'/>
+					<input class="input" id="inputurl" name="inputurl" type="text" required onkeypress="if(event.keyCode==13)ScanItNow('database')" placeholder='input the url like "www.google.com"'/>
 					<input class="hiddeninput" name="useforbannerEntersubmit"/>
-					<input class="submit" id="submiturl" name="submiturl" type="button" onclick="loadXMLDoc()" value="Scan This URL"/>
+					<input class="submit" id="submiturl" name="submiturl" type="button" onclick="ScanItNow('database')" value="Scan This URL"/>
 				</fieldset>
 			</form>
+			<article class="realtimeart">
+				<p>or <span onclick="ScanItNow('now')"> scan it now </span>(may take a long time)</p>
+			</article>
 		</section>
 		<!--PageContent End-->
 		<!--DerivedData Start-->
@@ -51,26 +54,11 @@
 			<h2>DerivedData</h2>
 			<form method="post" enctype="multipart/form-data" action="/deriveddata">
 				<fieldset>
-					<label for="level1">Choose the level between </label>
-					<select name="level1" id="level1">
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3" selected="selected">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-					</select>
-					<label for="level2"> and </label>
-					<select name="level2" id="level2">
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5" selected="selected">5</option>
-					</select>
-					<br/>
 					<label for="keywordofurls">Keywords of urls:</label>
-					<input class="input" name="keywordofurls" id="keywordofurls" type="text" placeholder='input the keyword like "google"'/>
-					<input class="submit" id="import" name="import" type="submit" value="Import"/>
+					<input class="input" name="keywordofurls" id="keywordofurls" type="text" placeholder='input the keywords like "google"'/>
+					<label for="scoreofurls">Totalscore of urls:</label>
+					<input class="input" name="scoreofurls" id="scoreofurls" type="text" placeholder='like "1,2"'/>
+					<input class="submit" id="export" name="export" type="submit" value="Export"/>
 				</fieldset>
 			</form>
 		</section>
@@ -84,4 +72,5 @@
 			</article>
 		</footer>
 		<!--Pagefooter End-->
+	</body>
 </html>

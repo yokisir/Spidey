@@ -1,1 +1,1 @@
-This is a test.
+[u'[{"model": "spidey.scanresult", "pk": "www.baidu.com", "fields": {"staticdetection": -1, "phish": -1, "download": -1, "fake": -1, "distort": -1, "trojan": -1, "totalscore": -1, "lastscantime": "2016-11-01T15:00:00Z"}}]']

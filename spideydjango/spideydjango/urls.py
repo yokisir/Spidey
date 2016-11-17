@@ -19,7 +19,8 @@ from spideydjango.spidey.views import *
 
 urlpatterns = [
     url(r'^spidey/$', index ),
-    url(r'^spidey/scanurl$', scanurl),
+    url(r'^spidey/scanurlnow$', scanurlnow),
+    url(r'^spidey/scanurlfromdatabase$', scanurlfromdatabase),
     url(r'^deriveddata$', deriveddata),
     url(r'^admin/', admin.site.urls),
 ]
